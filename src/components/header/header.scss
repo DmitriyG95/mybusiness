@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  z-index: 16;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  &--scroll {
+    backdrop-filter: blur(5px);
+  }
+
+  // .header__body
+  &__body {}
+
+  // .header__left
+  &__left {
+    column-gap: 27px;
+  }
+
+  // .header__lk
+  &__lk {
+    width: 170px;
+  }
+
+  // .header__helper
+  &__helper {
+    color: var(--orange);
+    column-gap: 15px;
+
+    @include smFix {
+      span {
+        display: none;
+      }
+    }
+
+    img {
+      width: 38px;
+    }
+  }
+}

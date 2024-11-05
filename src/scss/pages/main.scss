@@ -1,0 +1,309 @@
+.top {
+  height: 100vh;
+  position: relative;
+
+  // .top__bg
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: flex-end;
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  // .top__body
+  &__body {
+    margin-top: 136px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // .top__logo
+  &__logo {
+    width: 210px;
+    margin-bottom: 63px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .top__title
+  &__title {
+    color: var(--black-text);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 111.4%;
+    max-width: 576px;
+  }
+}
+
+.bottom {
+  position: relative;
+
+  // .bottom__bg
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  // .bottom__container
+  &__container {
+    position: relative;
+    z-index: 1;
+    padding: 85px 0 130px;
+    max-width: 782px;
+    margin: 0 auto;
+  }
+
+  // .bottom__title
+  &__title {
+    text-align: center;
+    max-width: 552px;
+    margin: 0 auto 40px auto;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 117.4%;
+  }
+
+  // .bottom__btns
+  &__btns {
+    column-gap: 26px;
+
+    @include md {
+      flex-flow: column;
+      row-gap: 20px;
+    }
+
+    .btn {
+      flex: 1;
+
+      @include md {
+        width: 100%;
+        flex: unset;
+      }
+    }
+  }
+}
+
+.advantages {
+  margin: 160px 0 240px;
+
+  @include md {
+    margin: 80px 0 120px;
+  }
+
+  .title {
+    margin-bottom: 72px;
+
+    @include md {
+      margin-bottom: 36px;
+    }
+  }
+
+  // .advantages__cont
+  &__cont {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .advantages__blocks
+  &__blocks {
+    gap: 100px;
+    flex-wrap: wrap;
+
+    @include md {
+      gap: 50px;
+    }
+  }
+
+  // .advantages__block
+  &__block {}
+
+  // .advantages__img
+  &__img {
+    width: 178px;
+    margin: 0 auto 20px auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .advantages__num
+  &__num {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 122.4%;
+    color: var(--blue)
+  }
+
+  // .advantages__name
+  &__name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 122.4%;
+    color: var(--black)
+  }
+}
+
+.history {
+  margin-bottom: 170px;
+
+  @include md {
+    margin-bottom: 95px;
+  }
+
+  .title {
+    margin: 0 auto 40px auto;
+  }
+
+  // .history__cont
+  &__cont {
+    max-width: 1004px;
+    margin: 0 auto;
+  }
+
+  // .history__block
+  &__block {
+    column-gap: 110px;
+
+    @include md {
+      gap: 20px;
+      flex-flow: column;
+
+      &:nth-child(2) {
+        flex-flow: column-reverse;
+      }
+    }
+
+    &+& {
+      margin-top: 40px;
+    }
+  }
+
+  // .history__img
+  &__img {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .history__text
+  &__text {
+    width: 570px;
+
+    @include md {
+      width: calc(100% - 40px)
+    }
+  }
+
+  // .history__block-title
+  &__block-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 95.9%;
+    color: var(--black-text);
+    margin-bottom: 22px;
+  }
+
+  // .history__quote
+  &__quote {
+    color: var(--orange);
+    display: flex;
+    margin-bottom: 15px;
+
+    span {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    img {
+      width: 32px;
+    }
+  }
+
+  .text {
+    margin-bottom: 17px;
+  }
+
+  // .history__link
+  &__link {
+    width: 180px;
+  }
+}
+
+.bottom-s {
+  position: relative;
+  padding: 48px 0 70px;
+
+  // .bottom__bg
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      transform: rotate(180deg);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  // .bottom__cont
+  &__cont {
+    position: relative;
+    z-index: 1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  // .bottom__title
+  &__title {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  // .bottom__text
+  &__text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 270px;
+
+  }
+}
